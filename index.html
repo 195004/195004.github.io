@@ -1,1 +1,83 @@
-wwwww
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Vue.js sample</title>
+		<link rel="stylesheet" href="style.css" >
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	</head>
+	
+	<body>
+		<h2>画像の表示をラジオボタンで切り換える例</h2>
+		<div id="app">
+			<table>
+				<p>武器</p>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="radio" value="短刀"	v-model="fileName">
+						短刀</label><br>
+					</td>
+					<td v-for="item in line">{{item}}
+					<label><input type="radio" value="太刀" v-model="fileName">
+						太刀</label><br>
+					</td>
+					<td v-for="item in line">{{item}}
+					<label><input type="radio" value="長柄" v-model="fileName">
+						長柄</label><br>
+					</td>
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+				<label><input type="radio" value="遠距離" v-model="fileName">
+					遠距離</label><br>
+				</td>
+					<td v-for="item in line">{{item}}
+				<label><input type="radio" value="法器" v-model="fileName">
+					法器</label><br>
+				</td>
+				<td v-for="item in line">{{item}}
+				<label><input type="radio" value="符宝" v-model="fileName">
+					符宝</label><br>
+					</td>
+					<td v-for="item in line">{{item}}
+
+				</td> 
+				</tr>
+			</table>
+			
+			<p>{{ fileName }} <p>
+
+		</div>
+
+		<script>
+			new Vue({
+				el: '#app',
+				data: {
+					ranking:[
+						[''],
+					],
+					fileName: []
+				}
+			})
+		</script>
+
+    <style>
+		table{
+			width:100%;
+			text-align: left;
+		}
+		table th {
+			padding: 12px;
+			border-bottom: 
+			2px solid darkgray;
+		}
+		table td {
+			padding: 12px;
+		}
+		table tr:nth-of-type(even){
+			background-color: rgba(0, 0, 255,0.1);
+		}
+	</style>
+	</body>
+</html>
