@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,45 +8,802 @@
 	</head>
 	
 	<body>
-		<h2>画像の表示をラジオボタンで切り換える例</h2>
+		<h2>剣が刻キャラクターデータ</h2>
 		<div id="app">
 			<table>
-				<p>武器</p>
+				<p>人族</p>
 				<tr v-for="line in ranking">
 					<td v-for="item in line">{{item}}
-					<label><input type="radio" value="短刀"	v-model="fileName">
-						短刀</label><br>
+					<label><input type="checkbox" value="徳川光国"	v-model="myVsible1">
+						徳川光国</label><br>
+							<td colspan="3"><img src="1.png" width="100" height="100">
+						<tr v-if="myVsible1">
+							<td>太刀</td>
+							<td>攻撃</td>
+							<td>範囲固定</td>
+						    <td>隊長</td>
+					</tr>
+						
 					</td>
+				    </tr>			
+					<tr v-for="line in ranking">
 					<td v-for="item in line">{{item}}
-					<label><input type="radio" value="太刀" v-model="fileName">
-						太刀</label><br>
+					<label><input type="checkbox" value="狩野探幽" v-model="myVsible2">
+						狩野探幽</label><br>
+						<td colspan="3"><img src="2.png" width="100" height="100">
+						<tr v-if="myVsible2">
+							<td>法器</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊員</td>
+						</tr>
 					</td>
+					</tr>
+					<tr v-for="line in ranking">
 					<td v-for="item in line">{{item}}
-					<label><input type="radio" value="長柄" v-model="fileName">
-						長柄</label><br>
+					<label><input type="checkbox" value="松尾芭蕉" v-model="myVsible3">
+						松尾芭蕉</label><br>
+						<td colspan="3"><img src="3.png" width="100" height="100">
+						<tr v-if="myVsible3">
+							<td>遠距離</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊員</td>
+						</tr>
 					</td>
 				</tr>
 				<tr v-for="line in ranking">
 					<td v-for="item in line">{{item}}
-				<label><input type="radio" value="遠距離" v-model="fileName">
-					遠距離</label><br>
-				</td>
+				    <label><input type="checkbox" value="鴇羽" v-model="myVsible4">
+					    鴇羽</label><br>
+						<td colspan="3"><img src="4.png" width="100" height="100">
+					<tr v-if="myVsible4">
+						<td>長柄</td>
+						<td>攻撃</td>
+						<td>範囲法術</td>
+						<td>隊長</td>
+					</tr>
+				    </td>
+				   </tr>
+				<tr v-for="line in ranking">
 					<td v-for="item in line">{{item}}
-				<label><input type="radio" value="法器" v-model="fileName">
-					法器</label><br>
+				    <label><input type="checkbox" value="伊東一刀斎" v-model="myVsible5">
+					    伊東一刀斎</label><br>
+						<td colspan="3"><img src="5.png" width="100" height="100">
+					<tr v-if="myVsible5">
+						<td>太刀</td>
+						<td>攻撃</td>
+						<td>範囲物理</td>
+						<td>隊長</td>
+					</tr>
 				</td>
+				</tr>
+				<tr v-for="line in ranking">
 				<td v-for="item in line">{{item}}
-				<label><input type="radio" value="符宝" v-model="fileName">
-					符宝</label><br>
-					</td>
+				<label><input type="checkbox" value="縹茶半次" v-model="myVsible6">
+					縹茶半次</label><br>
+					<td colspan="3"><img src="6.png" width="100" height="100">
+					<tr v-if="myVsible6">
+						<td>短刀</td>
+						<td>攻撃</td>
+						<td>範囲物理</td>
+						<td>隊員</td>
+                </tr>
+				</td>
+				</tr>
+				<tr v-for="line in ranking">
+				<td v-for="item in line">{{item}}
+				<label><input type="checkbox" value="酒井忠勝" v-model="myVsible7">
+					酒井忠勝</label><br>
+					<td colspan="3"><img src="7.png" width="100" height="100">
+					<tr v-if="myVsible7">
+						<td>短刀</td>
+						<td>補助</td>
+						<td>物理</td>
+						<td>万能</td>
+					</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+				<td v-for="item in line">{{item}}
+				<label><input type="checkbox" value="天海" v-model="myVsible8">
+					天海</label><br>
+					<td colspan="3"><img src="8.png" width="100" height="100">
+					<tr v-if="myVsible8">
+						<td>符宝</td>
+						<td>治療</td>
+						<td>範囲治療</td>
+						<td>隊員</td>
+					</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+				<td v-for="item in line">{{item}}
+				<label><input type="checkbox" value="七太夫長能" v-model="myVsible9">
+					七太夫長能</label><br>
+					<td colspan="3"><img src="9.png" width="100" height="100">
+					<tr v-if="myVsible9">
+						<td>符宝</td>
+						<td>補助</td>
+						<td>範囲治療</td>
+						<td>万能</td>
+					</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+				<td v-for="item in line">{{item}}
+				<label><input type="checkbox" value="フランソワ・カロン" v-model="myVsible10">
+					フランソワ・カロン</label><br>
+					<td colspan="3"><img src="10.png" width="100" height="100">
+					<tr v-if="myVsible10">
+						<td>遠距離</td>
+						<td>攻撃</td>
+						<td>単体物理</td>
+						<td>隊員</td>
+					</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+				<td v-for="item in line">{{item}}
+				<label><input type="checkbox" value="シャクシャイン" v-model="myVsible11">
+					シャクシャイン</label><br>
+					<td colspan="3"><img src="11.png" width="100" height="100">
+					<tr v-if="myVsible11">
+						<td>太刀</td>
+						<td>攻撃</td>
+						<td>範囲物理</td>
+						<td>隊長</td>
+					</tr>
+				</td> 
+				</tr>
+					<tr v-for="line in ranking">
+						<td v-for="item in line">{{item}}
+						<label><input type="checkbox" value="由比正雪" v-model="myVsible12">
+					由比正雪</label><br>
+					<td colspan="3"><img src="12.png" width="100" height="100">
+					<tr v-if="myVsible12">
+						<td>法器</td>
+						<td>攻撃</td>
+						<td>範囲物理</td>
+						<td>隊員</td>
+					</tr>
+				</td> 
+				</tr>
+					<tr v-for="line in ranking">
 					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="伊吹" v-model="myVsible13">
+						伊吹</label><br>
+						<td colspan="3"><img src="13.png" width="100" height="100">
+						<tr v-if="myVsible13">
+							<td>長柄</td>
+							<td>攻撃</td>
+							<td>範囲物理</td>
+							<td>隊長</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="鬼菱" v-model="myVsible14">
+						鬼菱</label><br>
+						<td colspan="3"><img src="14.png" width="100" height="100">
+						<tr v-if="myVsible14">
+							<td>遠距離</td>
+							<td>攻撃</td>
+							<td>範囲物理</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="荒木又左衛門" v-model="myVsible15">
+						荒木又左衛門</label><br>
+						<td colspan="3"><img src="15.png" width="100" height="100">
+						<tr v-if="myVsible15">
+							<td>短刀</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="胤舜" v-model="myVsible16">
+						胤舜</label><br>
+						<td colspan="3"><img src="16.png" width="100" height="100">
+						<tr v-if="myVsible16">
+							<td>長柄</td>
+							<td>攻撃</td>
+							<td>範囲物理</td>
+							<td>万能</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="ヌノ・アルヴァレス" v-model="myVsible57">
+						ヌノ・アルヴァレス</label><br>
+						<td colspan="3"><img src="57.png" width="100" height="100">
+						<tr v-if="myVsible57">
+							<td>符宝</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊長</td>
+						</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="市五郎" v-model="myVsible58">
+						市五郎</label><br>
+						<td colspan="3"><img src="58.png" width="100" height="100">
+						<tr v-if="myVsible58">
+							<td>法器</td>
+							<td>攻撃</td>
+							<td>範囲物理</td>
+							<td>万能</td>
+					</tr>	
+			</table>
 
+			<table>
+				<p>鬼族</p>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="葵" v-model="myVsible17">
+						葵</label><br>
+						<td colspan="3"><img src="17.png" width="100" height="100">
+						<tr v-if="myVsible17">
+							<td>遠距離</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>万能</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="樒" v-model="myVsible18">
+						樒</label><br>
+						<td colspan="3"><img src="18.png" width="100" height="100">
+						<tr v-if="myVsible18">
+							<td>短刀</td>
+							<td>攻撃</td>
+							<td>単体物理</td>
+							<td>万能</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="周" v-model="myVsible19">
+						周</label><br>
+						<td colspan="3"><img src="19.png" width="100" height="100">
+						<tr v-if="myVsible19">
+							<td>長柄</td>
+							<td>防御</td>
+							<td>高法術防御</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="唐獅子" v-model="myVsible20">
+						唐獅子</label><br>
+						<td colspan="3"><img src="20.png" width="100" height="100">
+						<tr v-if="myVsible20">
+							<td>遠距離</td>
+							<td>攻撃</td>
+							<td>単体法術</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="狗牙丸" v-model="myVsible21">
+						狗牙丸</label><br>
+						<td colspan="3"><img src="21.png" width="100" height="100">
+						<tr v-if="myVsible21">
+							<td>太刀</td>
+							<td>攻撃</td>
+							<td>単体物理</td>
+							<td>隊長</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="浪" v-model="myVsible22">
+						浪</label><br>
+						<td colspan="3"><img src="22.png" width="100" height="100">
+						<tr v-if="myVsible22">
+							<td>短刀</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="卯蝶" v-model="myVsible23">
+						卯蝶</label><br>
+						<td colspan="3"><img src="23.png" width="100" height="100">
+						<tr v-if="myVsible23">
+							<td>法器</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="不動十王" v-model="myVsible24">
+						不動十王</label><br>
+						<td colspan="3"><img src="24.png" width="100" height="100">
+						<tr v-if="myVsible24">
+							<td>長柄</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊長</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="八瀬" v-model="myVsible25">
+						八瀬</label><br>
+						<td colspan="3"><img src="25.png" width="100" height="100">
+						<tr v-if="myVsible25">
+							<td>太刀</td>
+							<td>防御</td>
+							<td>物理防御</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="闇蛇羅" v-model="myVsible26">
+						闇蛇羅</label><br>
+						<td colspan="3"><img src="26.png" width="100" height="100">
+						<tr v-if="myVsible26">
+							<td>長柄</td>
+							<td>攻撃</td>
+							<td>範囲物理</td>
+							<td>隊長</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="薙之助" v-model="myVsible27">
+						薙之助</label><br>
+						<td colspan="3"><img src="27.png" width="100" height="100">
+						<tr v-if="myVsible27">
+							<td>短刀</td>
+							<td>攻撃</td>
+							<td>範囲物理</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="悪毒王" v-model="myVsible28">
+						悪毒王</label><br>
+						<td colspan="3"><img src="28.png" width="100" height="100">
+						<tr v-if="myVsible28">
+							<td>法器</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊長</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="日輪" v-model="myVsible29">
+						日輪</label><br>
+						<td colspan="3"><img src="29.png" width="100" height="100">
+						<tr v-if="myVsible29">
+							<td>法器</td>
+							<td>治療</td>
+							<td>範囲回復</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="月輪" v-model="myVsible30">
+						月輪</label><br>
+						<td colspan="3"><img src="30.png" width="100" height="100">
+						<tr v-if="myVsible30">
+							<td>法器</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="斉場" v-model="myVsible31">
+						斉場</label><br>
+						<td colspan="3"><img src="31.png" width="100" height="100">
+						<tr v-if="myVsible31">
+							<td>太刀</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>万能</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="心" v-model="myVsible32">
+						心</label><br>
+						<td colspan="3"><img src="32.png" width="100" height="100">
+						<tr v-if="myVsible32">
+							<td>符宝</td>
+							<td>攻撃</td>
+							<td>範囲物理</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="風魔" v-model="myVsible59">
+						風魔</label><br>
+						<td colspan="3"><img src="60.png" width="100" height="100">
+						<tr v-if="myVsible59">
+							<td>短刀</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>万能</td>
+						</tr>
 				</td> 
 				</tr>
 			</table>
 			
-			<p>{{ fileName }} <p>
-
+            <table>
+				<p>妖族</p>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="飯綱" v-model="myVsible33">
+						飯綱</label><br>
+						<td colspan="3"><img src="33.png" width="100" height="100">
+						<tr v-if="myVsible33">
+							<td>長柄</td>
+							<td>防御</td>
+							<td>範囲法術</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="相模坊" v-model="myVsible34">
+						相模坊</label><br>
+						<td colspan="3"><img src="34.png" width="100" height="100">
+						<tr v-if="myVsible34">
+							<td>短刀</td>
+							<td>攻撃</td>
+							<td>範囲物理</td>
+							<td>万能</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="繋々" v-model="myVsible35">
+						繋々</label><br>
+						<td colspan="3"><img src="35.png" width="100" height="100">
+						<tr v-if="myVsible35">
+							<td>遠距離</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="珠" v-model="myVsible36">
+						珠</label><br>
+						<td colspan="3"><img src="36.png" width="100" height="100">
+						<tr v-if="myVsible36">
+							<td>法器</td>
+							<td>補助</td>
+							<td>範囲治療</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="歌京音丸" v-model="myVsible37">
+						歌京音丸</label><br>
+						<td colspan="3"><img src="37.png" width="100" height="100">
+						<tr v-if="myVsible37">
+							<td>長柄</td>
+							<td>防御</td>
+							<td>高法術防御</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="萩嵐雪" v-model="myVsible38">
+						萩嵐雪</label><br>
+						<td colspan="3"><img src="38.png" width="100" height="100">
+						<tr v-if="myVsible38">
+							<td>太刀</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊長</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="叉梵" v-model="myVsible39">
+						叉梵</label><br>
+						<td colspan="3"><img src="39.png" width="100" height="100">
+						<tr v-if="myVsible39">
+							<td>短刀</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="梢姫" v-model="myVsible40">
+						梢姫</label><br>
+						<td colspan="3"><img src="40.png" width="100" height="100">
+						<tr v-if="myVsible40">
+							<td>符宝</td>
+							<td>治療</td>
+							<td>範囲治療</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="蛟" v-model="myVsible41">
+						蛟</label><br>
+						<td colspan="3"><img src="41.png" width="100" height="100">
+						<tr v-if="myVsible41">
+							<td>遠距離</td>
+							<td>補助</td>
+							<td>範囲法術</td>
+							<td>万能</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="掬水" v-model="myVsible42">
+						掬水</label><br>
+						<td colspan="3"><img src="42.png" width="100" height="100">
+						<tr v-if="myVsible42">
+							<td>符宝</td>
+							<td>攻撃</td>
+							<td>範囲物理</td>
+							<td>隊長</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="八雲" v-model="myVsible60">
+						八雲</label><br>
+						<td colspan="3"><img src="59.png" width="100" height="100">
+						<tr v-if="myVsible60">
+							<td>法器</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>万能</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="不知火夜光" v-model="myVsible61">
+						不知火夜光</label><br>
+						<td colspan="3"><img src="61.png" width="100" height="100">
+						<tr v-if="myVsible61">
+							<td>遠距離</td>
+							<td>攻撃</td>
+							<td>範囲物理</td>
+							<td>隊長</td>
+						</tr>
+				</td> 
+				</tr>
+			</table>
+			<table>
+			<p>マレビト</p>
+			<tr v-for="line in ranking">
+				<td v-for="item in line">{{item}}
+				<label><input type="checkbox" value="琉胡" v-model="myVsible43">
+					琉胡</label><br>
+					<td colspan="3"><img src="43.png" width="100" height="100">
+					<tr v-if="myVsible43">
+						<td>符宝</td>
+						<td>治療</td>
+						<td>単体治療</td>
+						<td>隊員</td>
+					</tr>
+			</td> 
+			</tr>
+			<tr v-for="line in ranking">
+				<td v-for="item in line">{{item}}
+				<label><input type="checkbox" value="鶴間大吉" v-model="myVsible44">
+					鶴間大吉</label><br>
+					<td colspan="3"><img src="44.png" width="100" height="100">
+					<tr v-if="myVsible44">
+						<td>太刀</td>
+						<td>防御</td>
+						<td>物理防御</td>
+						<td>隊員</td>
+					</tr>
+			</td> 
+			</tr>
+			<tr v-for="line in ranking">
+				<td v-for="item in line">{{item}}
+				<label><input type="checkbox" value="青波征一郎" v-model="myVsible45">
+					青波征一郎</label><br>
+					<td colspan="3"><img src="45.png" width="100" height="100">
+					<tr v-if="myVsible45">
+						<td>法器</td>
+						<td>補助</td>
+						<td>法術</td>
+						<td>隊員</td>
+					</tr>
+			</td> 
+			</tr>
+			<tr v-for="line in ranking">
+				<td v-for="item in line">{{item}}
+				<label><input type="checkbox" value="深美萌夏" v-model="myVsible46">
+					深美萌夏</label><br>
+					<td colspan="3"><img src="46.png" width="100" height="100">
+					<tr v-if="myVsible46">
+						<td>法器</td>
+						<td>攻撃</td>
+						<td>範囲法術</td>
+						<td>隊員</td>
+					</tr>
+			</td> 
+			</tr>
+			<tr v-for="line in ranking">
+				<td v-for="item in line">{{item}}
+				<label><input type="checkbox" value="橘道生" v-model="myVsible47">
+					橘道生</label><br>
+					<td colspan="3"><img src="47.png" width="100" height="100">
+					<tr v-if="myVsible47">
+						<td>遠距離</td>
+						<td>攻撃</td>
+						<td>単体物理</td>
+						<td>隊員</td>
+					</tr>
+			</td> 
+			</tr>
+			<tr v-for="line in ranking">
+				<td v-for="item in line">{{item}}
+				<label><input type="checkbox" value="紫桜" v-model="myVsible48">
+					紫桜</label><br>
+					<td colspan="3"><img src="48.png" width="100" height="100">
+					<tr v-if="myVsible48">
+						<td>短刀</td>
+						<td>攻撃</td>
+						<td>単体法術</td>
+						<td>隊員</td>
+					</tr>
+			</td> 
+			</tr>
+			<tr v-for="line in ranking">
+				<td v-for="item in line">{{item}}
+				<label><input type="checkbox" value="付喪" v-model="myVsible49">
+					付喪</label><br>
+					<td colspan="3"><img src="49.png" width="100" height="100">
+					<tr v-if="myVsible49">
+						<td>太刀</td>
+						<td>攻撃</td>
+						<td>範囲法術</td>
+						<td>隊長</td>
+					</tr>
+			</td> 
+			</tr>
+			</table>
+			<table>
+				<p>異族（コラボ）</p>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="九十九丸" v-model="myVsible50">
+						九十九丸</label><br>
+						<td colspan="3"><img src="51.png" width="100" height="100">
+						<tr v-if="myVsible50">
+							<td>太刀</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊長</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="鷺原左京" v-model="myVsible51">
+						鷺原左京</label><br>
+						<td colspan="3"><img src="52.png" width="100" height="100">
+						<tr v-if="myVsible51">
+							<td>太刀</td>
+							<td>攻撃</td>
+							<td>範囲物理</td>
+							<td>隊長</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="縁" v-model="myVsible52">
+						縁</label><br>
+						<td colspan="3"><img src="53.png" width="100" height="100">
+						<tr v-if="myVsible52">
+							<td>符宝</td>
+							<td>攻撃</td>
+							<td>範囲物理</td>
+							<td>隊長</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="螢" v-model="myVsible53">
+						螢</label><br>
+						<td colspan="3"><img src="54.png" width="100" height="100">
+						<tr v-if="myVsible53">
+							<td>短刀</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊長</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="黒羽実彰" v-model="myVsible54">
+						黒羽実彰</label><br>
+						<td colspan="3"><img src="55.png" width="100" height="100">
+						<tr v-if="myVsible54">
+							<td>太刀</td>
+							<td>攻撃</td>
+							<td>範囲物理</td>
+							<td>隊員</td>
+						</tr>
+				</td> 
+				</tr>
+				<tr v-for="line in ranking">
+					<td v-for="item in line">{{item}}
+					<label><input type="checkbox" value="鈴懸" v-model="myVsible55">
+						鈴懸</label><br>
+						<td colspan="3"><img src="56.png" width="100" height="100">
+						<tr v-if="myVsible55">
+							<td>短刀</td>
+							<td>攻撃</td>
+							<td>範囲法術</td>
+							<td>隊長</td>
+						</tr>
+				</td> 
+				</tr>
+			</table>
 		</div>
 
 		<script>
@@ -57,27 +813,92 @@
 					ranking:[
 						[''],
 					],
-					fileName: []
+					myVsible1: false,
+                    myVsible2: false,
+					myVsible3: false,
+					myVsible4: false,
+					myVsible5: false,
+					myVsible6: false,
+					myVsible7: false,
+					myVsible8: false,
+					myVsible9: false,
+					myVsible10: false,
+					myVsible11: false,
+					myVsible12: false,
+					myVsible13: false,
+					myVsible14: false,
+					myVsible15: false,
+					myVsible16: false,
+					myVsible17: false,
+					myVsible18: false,
+					myVsible19: false,
+					myVsible20: false,
+					myVsible21: false,
+					myVsible22: false,
+					myVsible23: false,
+					myVsible24: false,
+					myVsible25: false,
+					myVsible26: false,
+					myVsible27: false,
+					myVsible28: false,
+					myVsible29: false,
+					myVsible30: false,
+					myVsible31: false,
+					myVsible32: false,
+					myVsible33: false,
+					myVsible34: false,
+					myVsible35: false,
+					myVsible36: false,
+					myVsible37: false,
+					myVsible38: false,
+					myVsible39: false,
+					myVsible40: false,
+					myVsible41: false,
+					myVsible42: false,
+					myVsible43: false,
+					myVsible44: false,
+					myVsible45: false,
+					myVsible46: false,
+					myVsible47: false,
+					myVsible48: false,
+					myVsible49: false,
+					myVsible50: false,
+					myVsible51: false,
+					myVsible52: false,
+					myVsible53: false,
+					myVsible54: false,
+					myVsible55: false,
+					myVsible56: false,
+					myVsible57: false,
+					myVsible58: false,
+					myVsible59: false,
+					myVsible60: false,
+					myVsible61: false
 				}
 			})
 		</script>
 
     <style>
 		table{
-			width:100%;
-			text-align: left;
+			widows: 80%;
+			text-align: center;
+            margin: 0 auto;
+            padding: 0;
+            width: 650px;
+            table-layout: fixed;
+			color: #000;
+			border-collapse: collapse;
+			border: solid 3px skyblue;
 		}
 		table th {
-			padding: 12px;
-			border-bottom: 
-			2px solid darkgray;
+			padding: 8px;
+			text-align: center;
 		}
 		table td {
-			padding: 12px;
+			padding: 10px 5px;
+			border: solid 1px skyblue;
 		}
-		table tr:nth-of-type(even){
-			background-color: rgba(0, 0, 255,0.1);
-		}
+		
 	</style>
 	</body>
 </html>
